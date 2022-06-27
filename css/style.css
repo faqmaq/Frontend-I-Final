@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Declaración de variables */
+:root{
+    --ColorTitulo: #242E53;
+    --ColorPrincipal: #F3603B;
+    --ColorTextoPrincipal: #ffffff;
+    --ColorSecundario: #FAFAFA;
+    --ColorTituloSecundario: #323851;
+    --ColorParrafo: #B3B2B7;
+    --ColorBackFooter: #1E1E26;
+}
+
+/*Propiedades generales*/
+html{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 62.5%;
+}
+
+/* Inicia estilo de encabezado */
+.header{
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    padding: 7.5rem 16.5rem;
+}
+.header__logo{
+    
+
+}
+.header__menu{
+    align-items: center;
+    color: var(--ColorTitulo);
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    gap: 2.8rem;
+    justify-content: center;
+    line-height: 1.3rem;
+}
+.button{
+    background-color: var(--ColorPrincipal);
+    border: none;
+    border-radius: 2.2rem;
+    box-shadow: 0 0.5rem #fbd1c5;    
+    color: var(--ColorTextoPrincipal);
+    font-size: 1.318rem;
+    font-weight: 500;
+    line-height: 1.318rem;
+    padding: 1.25rem 3.05rem;
+}
+.header__button{
+    box-shadow: 0 0.5rem #CECECE;
+}/* cambia color de sombra, por cascada se aplicará este estilo al botón del header*/
+
+/* Inicia estilo del Main */
+        /* Inicia primera sección del main */
+
+.main{
+    font-weight: 500;      
+}
+
+.main__data, .main__highlights{
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    margin-top: 12rem;
+    padding: 0em 16.5rem;
+   
+}
+
+.main__data__note{
+    align-items:flex-start ;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    width: 50%;
+}
+
+.main__data__note__title{
+    color: var(--ColorTitulo);
+    flex-grow: 1;  
+    font-size: 5.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02rem;
+    line-height: 6.647rem;
+}
+
+.main__data__note__header{
+    font-size: 1.656rem;
+    width: 35rem;
+}
+
+.main__data__stats{
+    width: 50%;    
+}
+
+.main__data__stats img{
+    max-width: 100%;
+    min-width: 350px;
+}
+
+        /* inicia segunda sección del main */
+
+.main__highlights{    
+    align-items: flex-start;/* aplica por cascada */ 
+}
+
+.main__highlights_what{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3.6rem;
+    justify-content: center;
+    width: 50%;
+}
+
+.main__highlights_what__title{
+    color: var(--ColorTitulo);
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4.122rem;
+}
+.main__highlights_what__text{
+    font-size: 1.6rem;
+    width: 33.7rem;
+}
+
+.main__highlights_how{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.main__highlights_how span{
+    background-color: var(--ColorPrincipal);
+    border-radius: 21.5rem;
+    color: var(--ColorTextoPrincipal);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+    padding: 1rem 2.5rem;
+}
+.main__highlights_how h4{
+    color: var(--ColorTituloSecundario);
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+
+.main__highlights_how p{
+    color: var(--ColorParrafo);
+    font-size: 1.63rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    margin-left: 9rem;
+    margin-bottom: 2rem;
+}
+
+        /* Inicia tercera sección del main */
+
+.main__testimonies{
+    align-items: center;    
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 12rem;
+}
+
+.main__testimonies__title{
+    color: var(--ColorTitulo);
+    font-size: 3.921rem;
+}
+
+.main__testimonies__content{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main__testimonies__content__test{
+    min-height: 25.4rem;
+    position: relative;
+    width: 30%;
+}
+
+.main__testimonies__content__test__avatar{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.main__testimonies__content__test__avatar img{
+    width: 7rem;   
+}
+
+.main__testimonies__content__test__name{
+    color: var(--ColorTitulo);
+    font-size: 1.6rem;
+    position: absolute; top: 9.1rem;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+.main__testimonies__content__test__content{
+    background-color: var(--ColorSecundario);
+    color: #B9B9C1;
+    font-size: 1.6rem;
+    font-weight: 500;
+    height: 21.9rem;
+    padding: 10.25rem 2.1rem 3.85rem;
+    position: relative; top: 3.5rem;
+    text-align: center;
+}
+
+.contenedor_img{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+        /* Inicia cuarta sección del main */
+.main__ending{
+    background-color: var(--ColorPrincipal);    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15rem;
+    padding: 6.4em 16.5rem;
+}
+
+.main__ending__phrase{
+    color: var(--ColorTextoPrincipal);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    width: 44rem;
+}
+
+.button_inverted{
+    background-color: var(--ColorTextoPrincipal);
+    border: none;
+    border-radius: 2.2rem;
+    box-shadow: 0 0.5rem #d55434;
+    color: var(--ColorPrincipal);
+    font-size: 1.318rem;
+    font-weight: 500;
+    line-height: 1.318rem;
+    padding: 1.25rem 3.05rem;
+}
+
+/* Fin del Main - Inicia footer */
+
+.footer{
+    align-items: center;
+    background-color: var(--ColorBackFooter);
+    display: flex;
+    justify-content: space-between;
+    padding: 5.7rem 16.5rem 5.2rem;    
+}
+
+.footer__community{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6.67rem;
+}
+.footer__community__logo{
+    color: var(--ColorTextoPrincipal);
+    font-size: 2.3rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.footer__community__icons{
+    color: var(--ColorTextoPrincipal);
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+.footer__map{
+    display: flex;
+    gap: 23rem;    
+}
+.footer__map__nav{
+    align-content: center;
+    color: var(--ColorTextoPrincipal);
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: flex-start;
+    line-height: 2.3rem;
+}
+
+.footer__suscribe{ 
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7.4rem;
+}
+.footer__suscribe__email{
+    display: flex;
+    gap: 1rem;
+}
+.footer__suscribe__email__input{
+    border-radius: 2.2rem;
+    border: none;
+    display: inline-block;
+    height: 4.4rem;
+    min-width: 20rem;
+    padding-left: 2rem;
+}
+.footer__suscribe__email__button{
+    color: var(--ColorTextoPrincipal);
+    background-color: var(--ColorPrincipal);
+    border: none;
+    border-radius: 2.2rem;
+    height: 4.4rem;
+    display: inline-block;
+    padding: 1.15rem 2.25rem;
+}
+.footer__suscribe__rights{
+    color: #8C8C94;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    font-weight: 500;        
+}
+
+.footer__community__logo::before{
+    content:url(../img/img-logo.png);
+    margin-right: 1rem;
+}
+
+
+
+

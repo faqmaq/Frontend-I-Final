@@ -31,7 +31,7 @@ html{
     display: flex;
     font-weight: 500;
     justify-content: space-between;
-    padding: 5% 11.5%;
+    padding: 5vh 11.5vw;
 }
 /* .header__logo{} */
 
@@ -40,7 +40,7 @@ html{
     color: var(--ColorTitulo);
     display: flex;
     flex-grow: 1;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-size: 1.3rem;
     gap: 2.8rem;
     justify-content: center;
@@ -62,15 +62,16 @@ html{
     line-height: 1.318rem;
     transition: all 0.5s;
     padding: 1.25rem 3.05rem;
+    white-space: nowrap;
 }
-.header__button{
+.header__button{/* cambia color de sombra, por cascada se aplicará este estilo al botón del header*/
     box-shadow: 0 0.5rem #CECECE;
-}/* cambia color de sombra, por cascada se aplicará este estilo al botón del header*/
-.header__hamb{
+}
+.header__hamb{/* Oculto en la versión desktop */
     display: none;
 }
 
-/* Inicia estilo del Main */
+/* Inician reglas de estilo del Main */
         /* Inicia primera sección del main */
 
 .main{
@@ -83,8 +84,7 @@ html{
     display: flex;
     gap: 5rem;
     justify-content: space-between;
-    padding: 5% 11.5%;
-   
+    padding: 5% 11.5%;   
 }
 
 .main__data__note{
@@ -160,12 +160,13 @@ html{
     font-weight: 700;
     line-height: 1.6rem;
     padding: 1rem 2.5rem;
+    position: absolute; /* para que libere su espacio y unificar márgenes título/párrafo */
 }
 .main__highlights_how h4{
     color: var(--ColorTituloSecundario);
     display: inline-block;
     font-size: 1.6rem;
-    margin-left: 2rem;
+    margin-left: 9rem;
 }
 
 .main__highlights_how p{
@@ -173,8 +174,7 @@ html{
     font-size: 1.63rem;
     font-weight: 500;
     line-height: 2.5rem;
-    margin-left: 9rem;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 9rem;    
 }
 
         /* Inicia tercera sección del main */
@@ -199,23 +199,21 @@ html{
     justify-content: center;
 }
 
+                    /* INICIA TARJETA DE TESTIMONIOS BOX MODEL*/
 .main__testimonies__content__test{
     min-height: 25.4rem;
     position: relative;
     width: 30%;
 }
-
 .main__testimonies__content__test__avatar{
     position: absolute;
     text-align: center;
     width: 100%;
-    z-index: 1;
-}
+    z-index: 1;}
 
 .main__testimonies__content__test__avatar img{
     width: 7rem;   
 }
-
 .main__testimonies__content__test__name{
     color: var(--ColorTitulo);
     font-size: 1.6rem;
@@ -234,13 +232,15 @@ html{
     position: relative; top: 3.5rem;
     text-align: center;
 }
+                    /* FIN TARJETA DE TESTIMONIOS */                
+
 
         /* Inicia cuarta sección del main */
 .main__ending{
+    align-items: center;
     background-color: var(--ColorPrincipal);    
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-top: 15rem;
     padding: 6.4em 16.5rem;
 }
@@ -265,6 +265,7 @@ html{
     line-height: 1.318rem;
     padding: 1.25rem 3.05rem;
     transition: all 0.5s;
+    white-space: nowrap;
 }
 
 /* Fin del Main - Inicia footer */
@@ -281,8 +282,8 @@ html{
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 6.67rem;
+    justify-content: space-between;
 }
 .footer__community__logo{
     color: var(--ColorTextoPrincipal);
@@ -305,8 +306,9 @@ html{
 
 .footer__map{
     display: flex;
-    gap: 23rem;    
+    gap: 20vw;       
 }
+
 .footer__map__nav{
     align-content: center;
     color: var(--ColorTextoPrincipal);
@@ -326,14 +328,15 @@ html{
 .footer__suscribe{ 
     align-items: flex-end;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     gap: 7.4rem;
     justify-content: center;
 }
 .footer__suscribe__email{
     display: flex;
-    gap: 1rem;
+    gap: 1rem;        
 }
+
 .footer__suscribe__email__input{
     border: none;
     border-radius: 2.2rem;
@@ -387,13 +390,13 @@ html{
 }
 
 .header__logo:hover{
-    transform-origin: top left;
     transform: scale(1.5);
+    transform-origin: top left;
 }
 
 
 
-@media (max-width: 376px){
+@media (max-width: 800px){
     html{
         font-size: 16.3%;
     }
@@ -413,17 +416,17 @@ html{
 
     /* 1era sección main */
     .main__data{
-        flex-direction: column;
-        padding: 10% 10%;
         align-items: center;
+        flex-direction: column;
         gap: 10rem;
         justify-content: space-between;
+        padding: 10% 10%;
     }
     .main__data__note{
         align-items:center;        
         gap: 10rem;
-        width: 100%;
         text-align: center;
+        width: 100%;
     }
     
     .main__data__note__title{
@@ -445,13 +448,13 @@ html{
     }
     
     .main__data__stats{
-        width: 100%;
         order: -1;
+        width: 100%;
     }
     
     .main__data__stats img{
-        width: 100%;
         min-width: 100px;                
+        width: 100%;
     }
     /* 2da sección main */
 
@@ -494,7 +497,7 @@ html{
     .main__highlights_how h4{        
         display: inline-block;
         font-size: 4.5rem;
-        margin-left: 5rem;
+        margin-left: 25rem;
     }
     
     .main__highlights_how p{
@@ -551,11 +554,11 @@ html{
     .main__testimonies__content__test__content{        
         font-size: 5rem;        
         height: 65rem;
+        margin: 0 5%;
         padding: 35rem 6.5rem 12rem;
         position: relative; top: 10.5rem;
         text-align: center;
         width: 90%;
-        margin: 0 5%;
     }
             /* 4° sección del main */
     .main__ending{
@@ -591,8 +594,8 @@ html{
     
     .footer__community{        
         flex-direction: column-reverse;
-        justify-content: space-between;
         gap: 10rem;
+        justify-content: space-between;
         width: 100%;
     }
     .footer__community__logo{        
@@ -656,8 +659,8 @@ html{
     background-color: var(--ColorPrincipal);
     border: none;
     border-radius: 8rem;
-    cursor: pointer;
     color: var(--ColorTextoPrincipal);
+    cursor: pointer;
     font-size: 10rem;
     margin: 5rem;
     padding: 3rem;

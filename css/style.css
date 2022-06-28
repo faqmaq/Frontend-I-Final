@@ -33,7 +33,14 @@ html{
     justify-content: space-between;
     padding: 5vh 11.5vw;
 }
-/* .header__logo{} */
+/* OPCIONAL 
+    .header__logo{
+        background-color: white;
+        border-radius: 5rem; 
+        padding: 3rem;
+        position: fixed;
+        z-index: 2;
+} */
 
 .header__menu{
     align-items: center;
@@ -47,6 +54,7 @@ html{
     line-height: 1.3rem;    
 }
 .header__menu a{
+    color: var(--ColorTitulo);
     text-decoration: none;
 }
 
@@ -369,7 +377,7 @@ html{
     margin-right: 1rem;
 }
 
-/* Pseudoselectores */
+/* Pseudoelementos/pseudoclases */
 
 .button:hover, .button_inverted:hover, .footer__suscribe__email__button:hover{
     background-color: #fbd1c5;
@@ -394,7 +402,7 @@ html{
     transform-origin: top left;
 }
 
-
+/* media query */
 
 @media (max-width: 800px){
     html{

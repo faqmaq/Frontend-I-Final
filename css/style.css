@@ -60,6 +60,7 @@ html{
     font-size: 1.318rem;
     font-weight: 500;
     line-height: 1.318rem;
+    transition: all 0.5s;
     padding: 1.25rem 3.05rem;
 }
 .header__button{
@@ -234,8 +235,6 @@ html{
     text-align: center;
 }
 
-
-
         /* Inicia cuarta sección del main */
 .main__ending{
     background-color: var(--ColorPrincipal);    
@@ -265,6 +264,7 @@ html{
     font-weight: 500;
     line-height: 1.318rem;
     padding: 1.25rem 3.05rem;
+    transition: all 0.5s;
 }
 
 /* Fin del Main - Inicia footer */
@@ -352,6 +352,7 @@ html{
     height: 4.4rem;
     margin-left: 1rem;
     padding: 1.15rem 2.25rem;
+    transition: all 0.5s;
 }
 .footer__suscribe__rights{
     color: #8C8C94;
@@ -384,6 +385,13 @@ html{
 .footer__suscribe__email__input::placeholder{
     color: var(--ColorParrafo);
 }
+
+.header__logo:hover{
+    transform-origin: top left;
+    transform: scale(1.5);
+}
+
+
 
 @media (max-width: 376px){
     html{
@@ -631,6 +639,7 @@ html{
     .footer__suscribe__rights{
         display: none;
     }
+}
     
    
 

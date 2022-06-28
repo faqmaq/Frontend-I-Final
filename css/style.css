@@ -31,12 +31,10 @@ html{
     display: flex;
     font-weight: 500;
     justify-content: space-between;
-    padding: 7.5rem 16.5rem;
+    padding: 5% 11.5%;
 }
-.header__logo{
-    
+/* .header__logo{} */
 
-}
 .header__menu{
     align-items: center;
     color: var(--ColorTitulo);
@@ -46,14 +44,19 @@ html{
     font-size: 1.3rem;
     gap: 2.8rem;
     justify-content: center;
-    line-height: 1.3rem;
+    line-height: 1.3rem;    
 }
+.header__menu a{
+    text-decoration: none;
+}
+
 .button{
     background-color: var(--ColorPrincipal);
     border: none;
     border-radius: 2.2rem;
     box-shadow: 0 0.5rem #fbd1c5;    
     color: var(--ColorTextoPrincipal);
+    cursor: pointer;/* googleado */
     font-size: 1.318rem;
     font-weight: 500;
     line-height: 1.318rem;
@@ -62,12 +65,16 @@ html{
 .header__button{
     box-shadow: 0 0.5rem #CECECE;
 }/* cambia color de sombra, por cascada se aplicará este estilo al botón del header*/
+.header__hamb{
+    display: none;
+}
 
 /* Inicia estilo del Main */
         /* Inicia primera sección del main */
 
 .main{
-    font-weight: 500;      
+    font-weight: 500;
+    width: 100%;     
 }
 
 .main__data, .main__highlights{
@@ -75,8 +82,7 @@ html{
     display: flex;
     gap: 5rem;
     justify-content: space-between;
-    margin-top: 12rem;
-    padding: 0em 16.5rem;
+    padding: 5% 11.5%;
    
 }
 
@@ -132,6 +138,7 @@ html{
     font-weight: 700;
     line-height: 4.122rem;
 }
+
 .main__highlights_what__text{
     font-size: 1.6rem;
     width: 33.7rem;
@@ -177,7 +184,7 @@ html{
     flex-direction: column;
     gap: 5rem;
     justify-content: center;
-    margin-top: 12rem;
+    margin-top: 6rem;
 }
 
 .main__testimonies__title{
@@ -227,12 +234,7 @@ html{
     text-align: center;
 }
 
-.contenedor_img{
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-}
+
 
         /* Inicia cuarta sección del main */
 .main__ending{
@@ -258,6 +260,7 @@ html{
     border-radius: 2.2rem;
     box-shadow: 0 0.5rem #d55434;
     color: var(--ColorPrincipal);
+    cursor: pointer;/* googleado */
     font-size: 1.318rem;
     font-weight: 500;
     line-height: 1.318rem;
@@ -286,12 +289,18 @@ html{
     font-size: 2.3rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
+    text-decoration: none;
 }
 
 .footer__community__icons{
     color: var(--ColorTextoPrincipal);
     font-size: 2rem;
     letter-spacing: 0.5rem;
+    margin-left: 0.5rem;   
+}
+.footer__community__icons a{
+    color: var(--ColorTextoPrincipal);/*Tuve que definir el color nuevamente porque no me tomaba el text-decoration: none; de lo contratio */
+    text-decoration: none;
 }
 
 .footer__map{
@@ -301,48 +310,54 @@ html{
 .footer__map__nav{
     align-content: center;
     color: var(--ColorTextoPrincipal);
-    font-size: 1.6rem;
-    font-weight: 400;
     display: flex;
     flex-direction: column;
+    font-size: 1.6rem;
+    font-weight: 400;
     gap: 1.2rem;
     justify-content: flex-start;
-    line-height: 2.3rem;
+    line-height: 2.3rem;    
+}
+.footer__map__nav a{
+    color: var(--ColorTextoPrincipal); /*Tuve que definir el color nuevamente porque no me tomaba el text-decoration: none; de lo contratio */
+    text-decoration: none;
 }
 
 .footer__suscribe{ 
     align-items: flex-end;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 7.4rem;
+    justify-content: center;
 }
 .footer__suscribe__email{
     display: flex;
     gap: 1rem;
 }
 .footer__suscribe__email__input{
-    border-radius: 2.2rem;
     border: none;
+    border-radius: 2.2rem;
     display: inline-block;
     height: 4.4rem;
     min-width: 20rem;
     padding-left: 2rem;
 }
 .footer__suscribe__email__button{
-    color: var(--ColorTextoPrincipal);
     background-color: var(--ColorPrincipal);
     border: none;
     border-radius: 2.2rem;
-    height: 4.4rem;
+    color: var(--ColorTextoPrincipal);
+    cursor: pointer;/* googleado */
     display: inline-block;
+    height: 4.4rem;
+    margin-left: 1rem;
     padding: 1.15rem 2.25rem;
 }
 .footer__suscribe__rights{
     color: #8C8C94;
     font-size: 1.25rem;
-    line-height: 1.8rem;
     font-weight: 500;        
+    line-height: 1.8rem;
 }
 
 .footer__community__logo::before{
@@ -350,6 +365,293 @@ html{
     margin-right: 1rem;
 }
 
+/* Pseudoselectores */
+
+.button:hover, .button_inverted:hover, .footer__suscribe__email__button:hover{
+    background-color: #fbd1c5;
+    color: var(--ColorTitulo);   
+}
+.button:active, .button_inverted:active{
+    box-shadow: 0 0;
+    padding: 1.45rem 3.05rem 1.05rem;
+}
+
+.footer__suscribe__email__input:focus{
+    background-color: var(--ColorBackFooter);
+    color: white;
+    
+}
+.footer__suscribe__email__input::placeholder{
+    color: var(--ColorParrafo);
+}
+
+@media (max-width: 376px){
+    html{
+        font-size: 16.3%;
+    }
+    .header{
+        padding: 10% 10%;
+    }
+    .header__menu{
+        display: none;
+    }
+    .header__button{
+        display: none;
+    }
+    .header__hamb{
+        display: block;
+        font-size: 8rem;
+    }
+
+    /* 1era sección main */
+    .main__data{
+        flex-direction: column;
+        padding: 10% 10%;
+        align-items: center;
+        gap: 10rem;
+        justify-content: space-between;
+    }
+    .main__data__note{
+        align-items:center;        
+        gap: 10rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .main__data__note__title{
+        font-size: 12rem;             
+        line-height: 12rem;
+    }
+    
+    .main__data__note__header{
+        font-size: 5rem;
+        width: 70%;
+    }
+
+    .button{
+        border-radius: 6rem;
+        box-shadow: 0 1.5rem #fbd1c5;        
+        font-size: 4rem;        
+        line-height: 4rem;
+        padding: 3.75rem 9rem;
+    }
+    
+    .main__data__stats{
+        width: 100%;
+        order: -1;
+    }
+    
+    .main__data__stats img{
+        width: 100%;
+        min-width: 100px;                
+    }
+    /* 2da sección main */
+
+    .main__highlights{
+        align-items: center;
+        flex-direction: column;        
+        gap: 15rem;        
+        padding: 10% 11.5%;
+    }
+    .main__highlights_what{ 
+        align-items: center;       
+        gap: 5 rem; 
+        text-align: center;       
+        width: 100%;
+    }
+
+    .main__highlights_what__title{        
+        font-size: 7rem;        
+        line-height: 7rem;
+        width: 65%;        
+    }
+    
+    .main__highlights_what__text{
+        font-size: 4rem;
+        width: 80%;
+    }
+    
+    .main__highlights_how{        
+        flex-direction: column;
+        gap: 8rem;
+        width: 100%;
+    }
+    
+    .main__highlights_how span{        
+        border-radius: 60rem;        
+        font-size: 5rem;            
+        line-height: 5rem;
+        padding: 3rem 7.5rem;
+    }
+    .main__highlights_how h4{        
+        display: inline-block;
+        font-size: 4.5rem;
+        margin-left: 5rem;
+    }
+    
+    .main__highlights_how p{
+        font-size: 4.5rem;        
+        line-height: 7.5rem;        
+        margin: 0 0 6rem 0;
+    }
+
+    /* 3ra sección del main */
+
+    .main__testimonies{
+        gap: 15rem;        
+        margin-top: 18rem;
+    }
+    
+    .main__testimonies__title{        
+        font-size: 7rem;
+    }
+    
+    .main__testimonies__content{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .test2, .test3{
+        display: none;
+    }
+
+    .test1{
+        min-height: 75rem;
+        position: relative;
+        width: 1000%;
+    }    
+    
+    .main__testimonies__content__test__avatar{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    .main__testimonies__content__test__avatar img{
+        width: 21rem;   
+    }
+    
+    .main__testimonies__content__test__name{
+        
+        font-size: 5rem;
+        position: absolute; top: 25rem;        
+        width: 100%;
+        z-index: 1;
+    }
+    .main__testimonies__content__test__content{        
+        font-size: 5rem;        
+        height: 65rem;
+        padding: 35rem 6.5rem 12rem;
+        position: relative; top: 10.5rem;
+        text-align: center;
+        width: 90%;
+        margin: 0 5%;
+    }
+            /* 4° sección del main */
+    .main__ending{
+        align-items: center;
+        flex-direction: column; 
+        gap: 10rem;       
+        justify-content: space-between;
+        margin-top: 15rem;
+        padding: 10rem 20rem;
+    }
+
+    .main__ending__phrase{        
+        font-size: 12rem;        
+        line-height: 15rem;
+        width: 100%;
+    }
+
+    .button_inverted{     
+        border-radius: 6rem;
+        box-shadow: 0 1.5rem #d55434;        
+        font-size: 4rem;        
+        line-height: 4rem;
+        padding: 3.75rem 9rem;
+    }
+    
+    /* FOOTER */
+
+    .footer{        
+        flex-direction: column-reverse;  
+        gap: 10rem;      
+        padding: 16rem 5rem 15rem;    
+    }
+    
+    .footer__community{        
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        gap: 10rem;
+        width: 100%;
+    }
+    .footer__community__logo{        
+        font-size: 7.5rem;        
+        letter-spacing: 0.1rem;        
+    }
+    
+    .footer__community__icons{                  
+        font-size: 10rem;
+        letter-spacing: 2rem;
+        margin-left: 2rem;            
+    }
+    
+    .footer__map{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;    
+    }
+    .footer__map__nav{          
+        font-size: 3.5rem; 
+        font-weight: 500;                    
+        line-height: 10rem;            
+    }  
+    
+    .footer__suscribe{ 
+        align-items: center;       
+        gap: 15rem;       
+        width: 100%;
+    }
+
+    
+    .footer__suscribe__email__input{        
+        border-radius: 6rem;        
+        height: 12rem;
+        min-width: 10rem;
+        padding-left: 6rem;
+    }
+    .footer__suscribe__email__button{        
+        border-radius: 6rem;      
+        height: 12rem;
+        margin-left: 3rem;
+        padding: 3.75rem 6.25rem;
+    }
+    .footer__suscribe__rights{
+        display: none;
+    }
+    
+   
 
 
 
+
+
+
+
+
+/* se incluye sólo para volver al index */
+
+#BACK{
+    background-color: var(--ColorPrincipal);
+    border: none;
+    border-radius: 8rem;
+    cursor: pointer;
+    color: var(--ColorTextoPrincipal);
+    font-size: 10rem;
+    margin: 5rem;
+    padding: 3rem;
+    text-decoration: none;
+
+}
